@@ -1,3 +1,4 @@
+import os
 from flask import Flask, request, abort, jsonify
 # from flask_sqlalchemy import SQLAlchemy
 from flask_cors import CORS
@@ -5,7 +6,7 @@ import sys
 
 from models import setup_db, Book
 
-print(sys.path)
+# print(sys.path)
 
 BOOKS_PER_SHELF = 8
 
