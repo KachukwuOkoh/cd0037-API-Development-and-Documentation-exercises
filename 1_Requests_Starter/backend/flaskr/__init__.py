@@ -1,9 +1,11 @@
 from flask import Flask, request, abort, jsonify
 # from flask_sqlalchemy import SQLAlchemy
 from flask_cors import CORS
-
+import sys
 
 from models import setup_db, Book
+
+print(sys.path)
 
 BOOKS_PER_SHELF = 8
 
@@ -156,4 +158,9 @@ def create_app(test_config=None):
         except:
             abort(422)
 
+    if __name__ == '__main__':
+        app.run()
+
     return app
+
+
